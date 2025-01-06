@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Instructions  - Taxonomy of Quality Criteria For Evaluations (QCET) Tool</title>
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="./static/js/app.js"></script>
+
+    <link rel= "stylesheet" type= "text/css" href= "./static/css/app.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Taxonomy of Quality Criteria For Evaluations (QCET) Tool</a>
+    </nav>
+    <hr>
+    <div class="content">
+        
+	
+
+    <h3> Instructions </h3>
+
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+	    <p>Click on the headers below to show the instructions.</p>
+
+	    <div class="accordion" id="accordionExample">
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingOne">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		        <strong>The Underlying QC Taxonomy</strong>
+		      </button>
+		    </h2>
+		    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+		      <div class="accordion-body">
+		        <p>The highest level distinction is between the following three QC subclasses (<a href="https://aclanthology.org/2020.inlg-1.24/" target="_blank">Belz et al., 2020)</a>:</p>
+		        <ol>
+					<li><strong>Correctness</strong>: The conditions under which outputs are maximally correct (hence of maximal quality) can be stated. E.g. for Grammaticality, outputs are (maximally) correct if they contain no grammatical errors.</li>
+					<li><strong>Goodness</strong>: It cannot be stated when outputs are maximally good, only which of two is better/worse. E.g. for Fluency, even if an output contains no disfluencies, there may be other ways to improve its fluency.</li>
+					<li><strong>Features</strong>: For a feature-type QC X, outputs are not generally better if they are more (or less) X. Depending on context, more X may be better or worse. E.g. Funny and Entertaining might be good in a narrative generator, but neither are appropriate in a nursing report generator.</li>
+				</ol>
+				<p>At the next level down, classes split into further sub-classes that reflect whether outputs are <strong>assessed in their own right, relative to the input, or relative to an external frame of reference</strong> (e.g. comparison to a gold standard). At a subsequent level, classes further split into the following three subclasses capturing which aspect of an output is being assessed:</p>
+				<ol>
+					<li><strong>Form</strong>: The form of outputs alone is assessed, e.g. Grammaticality – a sentence can be grammatical yet wrong or nonsensical in terms of content.</li>
+					<li><strong>Content</strong>: The content/meaning of outputs alone is assessed, e.g. Meaning Preservation – two sentences can have the same meaning, but differ in form.</li>
+					<li><strong>Both form and content</strong>: Outputs are assessed as a whole. E.g. Coherence is a property of outputs as a whole, either form or meaning can detract from it.</li>
+				</ol>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingTwo">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		        <strong>The QCET Tool</strong>
+		      </button>
+		    </h2>
+		    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+		      <div class="accordion-body">
+		        <p>QCET offers three core functionalities: (i) tree navigation via show child nodes (+) and collapse subtree (-); (ii) tree pruning driven by the three top taxonomy levels from Section 3; and (iii) viewing node details.</p>
+		        <p>The starting interface (screenshot in Appendix A) has instructions corresponding to Section 3 and the use cases below, followed by the three tree pruning pull-downs, and the taxonomy viewer initially showing just the root node (Quality of Outputs).</p>
+		        <p>The taxonomy tree can then be navigated by progressively showing child nodes and collapsing subtrees. Alternatively, to provide less comprehensive views, the taxonomy tree can be pruned in the following three ways:</p>
+		        <ol>
+		        	<li><strong>Prune by Level 1 QC classes</strong>: show only one of the three Level 1 subtrees, corresponding to showing Correctness QCs, Goodness QCs, or Feature-type QCs only. Options are selected via the first pull-down menu below.</li>
+		        	<li><strong>Prune by Level 2 QC classes</strong>: show all and only subtrees whose root node belongs to the class of QCs Evaluated in their Own Right (QCs Evaluated Relative to the Inputs, QCs Evaluated Relative to an External Frame of Reference). Options are selected via the second pull-down menu below.</li>
+		        	<li><strong>Prune by Form/Content/Both QC classes</strong>: show all and only subtrees whose rootnode is a Form QC (Content QC, Form and Content QC). Options are selected via the third pull-down menu below.</li>
+		        </ol>
+		        </p>The three pruning dimensions can be combined, so that e.g. selecting Correctness QCs only and Form QCs only at the same time will show just subtrees that are in both these classes. Note that the result will often be multiple subtrees.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingThree">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <strong>Nodes</strong>
+		      </button>
+		    </h2>
+		    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+		      <div class="accordion-body">
+		        <p>Each QC node has the following elements: (i) node ID, (ii) QC name; (iii) QC definition; (iv) suggested questions to put to the evaluators in a corresponding human evaluation of this criterion (a) in absolute and (b) relative evaluation mode; and (v) additional notes and information.</p>
+				<p>The node ID traces the path from the root to the node, e.g. QCO-f stands for Quality–Correctness–In its own right–Form. Each node has a (+) button or a (-) button, standing for show child nodes and collapse subtree, respectively. Nodes by default show just the QC name and definition; this view can be expanded in situ, by clicking on show details, or by clicking on the magnifying class icon which opens the full view of the node details in a new tab.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingFour">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+		        <strong>Use cases</strong>
+		      </button>
+		    </h2>
+		    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+		      <div class="accordion-body">
+		        <p>We envisage two main uses: (i) Mapping previous evaluations to standardised QCs for comparability, and (ii) choosing a QC name and definition for new evaluations. In both cases, the default use mode is to peruse the taxonomy from the root node down until the right node is found. For users more familiar with the taxonomy, the tree-pruning pull-downs offer a convenient way to reduce the search space.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingFive">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+		        <strong>Extensibility</strong>
+		      </button>
+		    </h2>
+		    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+		      <div class="accordion-body">
+		        <p>The QCET tool is intended as an extensible resource, to which new leaf nodes can be added as needed. The tool includes an interface for proposing new nodes to be inserted at a specific parent node in the publicly shared version which the QCET team will review and, by default, add.</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<hr />
+
+	<h3>Taxonomy Tree</h3>
+	<p style="margin-bottom: 0px;">Prune tree by level 1 QC classes (Correctness, Goodness, Features)</p>
+    <select onchange="updatePrune();" style="width:500px;" name="select_a" id="select_a">
+    	<option value=".">Show all Level 1 QC Classes</option>
+    	<option value="C">[C] Show Correctness QCs only</option>
+		<option value="G">[G] Show Goodness QCs only</option>
+		<option value="F">[F] Show Feature< QCs only</option>
+	</select>
+	<br />
+	<br />
+
+	<p style="margin-bottom: 0px;">Prune tree by level 2 QC classes (In its own Right, Relative to Input, Relative to External Frame of Reference)</p>
+	<select onchange="updatePrune();" style="width:500px;" name="select_b" id="select_b">
+		<option value=".">Show all Level 2 QC Classes</option>
+    	<option value="O">[O] Show QCs Evaluated in their Own Right only</option>
+		<option value="I">[I] Show QCs Evaluated Relative to the Inputs only</option>
+		<option value="E">[E] Show QCs Evaluated Relative to External Frame of Reference only</option>
+	</select>
+	<br />
+	<br />
+
+	<p style="margin-bottom: 0px;">Prune tree by form vs. content QC classes (Form, Content, Both)</p>
+	<select onchange="updatePrune();" style="width:500px;" name="select_c" id="select_c">
+		<option value=".">Show all Form/Content/Both QC Classes</option>
+    	<option value="f">[f] Show Form QCs only</option>
+		<option value="c">[c] Show Content QCs only</option>
+		<option value="b">[b] Show Form and Content QCs only</option>
+	</select>
+	<br />
+	<br />
+
+	<div class="pad">
+    	
+			<span id="Quality of outputs_prune" prune_key="-41OI523cfEFbQCBG" class="taxonomy_span" style="display: block">
+				<div id="Quality of outputs" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_0" style="display: block; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						Q&nbsp;:&nbsp;Quality of outputs
+						
+				<img id="Quality of outputs_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Quality of outputs')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The overall quality of an output.&nbsp;<a href="./show/Q.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Quality of outputs_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Quality of outputs')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Quality of outputs_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] What is the overall quality of this output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is of better quality overall?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Correctness of outputs_prune" prune_key="-1OI2cfEbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_1" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QC&nbsp;:&nbsp;Correctness of outputs
+						
+				<img id="Correctness of outputs_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is correct.&nbsp;<a href="./show/QC.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output correct?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more correct?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>For correctness criteria, it is possible to give, in the general case, the conditions under which outputs are maximally correct. E.g. for Grammaticality, an output is maximally correct if it contains no grammatical errors, and for Semantic Completeness, an output is correct if it expresses all the content represented in the input.  More correct is always preferrable irrespective of context.  E.g. (created example): Which of these two texts is more correct?</span>
+					</div>
+					
+			<span id="Correctness of outputs in their own right_prune" prune_key="-1O2cfbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs in their own right" class="taxonomy_node border border-dark rounded-5 border-3 google_light_yellow_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO&nbsp;:&nbsp;Correctness of outputs in their own right
+						
+				<img id="Correctness of outputs in their own right_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs in their own right')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is correct, considering only the output.&nbsp;<a href="./show/QCO.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs in their own right_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs in their own right')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs in their own right_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output correct, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more correct, considering only the output?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Correctness of outputs in their own right (form)_prune" prune_key="-1O2fQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs in their own right (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO-f&nbsp;:&nbsp;Correctness of outputs in their own right (form)
+						
+				<img id="Correctness of outputs in their own right (form)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs in their own right (form)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the form of a text is correct, considering only the text.&nbsp;<a href="./show/QCO-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs in their own right (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs in their own right (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs in their own right (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this text correct, considering only the text?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form, considering only the texts?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Grammaticality_prune" prune_key="-1OfQC" class="taxonomy_span" style="display: block">
+				<div id="Grammaticality" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO-f-1&nbsp;:&nbsp;Grammaticality
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is free of grammatical errors.&nbsp;<a href="./show/QCO-f-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Grammaticality_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Grammaticality')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Grammaticality_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text free of grammatical errors, looking at its form only and ignoring its content/meaning?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has fewer grammatical errors, looking at its form only and ignoring its content/meaning?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Spelling accuracy_prune" prune_key="-O2fQC" class="taxonomy_span" style="display: block">
+				<div id="Spelling accuracy" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO-f-2&nbsp;:&nbsp;Spelling accuracy
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is free of spelling errors. &nbsp;<a href="./show/QCO-f-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Spelling accuracy_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Spelling accuracy')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Spelling accuracy_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text free of spelling errors, looking at its form only and ignoring its content/meaning?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has fewer spelling errors, looking at its form only and ignoring its content/meaning?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs in their own right (content)_prune" prune_key="-OcQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs in their own right (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO-c&nbsp;:&nbsp;Correctness of outputs in their own right (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content/meaning of a text is correct, considering only the text.&nbsp;<a href="./show/QCO-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs in their own right (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs in their own right (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs in their own right (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content/meaning of this text correct, considering only the text?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct content/meaning, considering only the texts?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "is this dictionary reference semantically complete?"(best = no further info needed)</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs in their own right (both form and content)_prune" prune_key="-ObQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs in their own right (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCO-b&nbsp;:&nbsp;Correctness of outputs in their own right (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is correct in form and content/meaning, considering only the text.&nbsp;<a href="./show/QCO-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs in their own right (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs in their own right (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs in their own right (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text correct in form and content/meaning, considering only the text?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form and content/meaning, considering only the texts?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to input_prune" prune_key="-I12cfbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to input" class="taxonomy_node border border-dark rounded-5 border-3 google_light_red_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI&nbsp;:&nbsp;Correctness of outputs relative to input
+						
+				<img id="Correctness of outputs relative to input_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs relative to input')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is correct relative to the input.&nbsp;<a href="./show/QCI.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to input_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to input')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to input_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output correct relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more correct relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Correctness of outputs relative to input (form)_prune" prune_key="-IfQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to input (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI-f&nbsp;:&nbsp;Correctness of outputs relative to input (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of a text is correct relative to the input.&nbsp;<a href="./show/QCI-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to input (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to input (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to input (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this text correct relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. " how similar are the words with input?" (best = ?)</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to input (content)_prune" prune_key="-I12cQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to input (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI-c&nbsp;:&nbsp;Correctness of outputs relative to input (content)
+						
+				<img id="Correctness of outputs relative to input (content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs relative to input (content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content of a text is correct relative to the input.&nbsp;<a href="./show/QCI-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to input (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to input (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to input (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this text correct relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct content relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "is all the meaning of the input preserved?",  "to what extent does the generated text convey the information in the input table?" (best = all the information)</span>
+					</div>
+					
+			<span id="Absence of Omissions_prune" prune_key="-I1cQC" class="taxonomy_span" style="display: block">
+				<div id="Absence of Omissions" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI-c-1&nbsp;:&nbsp;Absence of Omissions
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of a text expresses the content of the input.&nbsp;<a href="./show/QCI-c-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Absence of Omissions_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Absence of Omissions')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Absence of Omissions_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does the content of this text express the content of the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts expresses more of the content of the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "Looking at each line of the Structured Representation in turn, does the Text express all the information in all lines in full (allow synonyms and aggregation)"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Absence of Additions_prune" prune_key="-I2cQC" class="taxonomy_span" style="display: block">
+				<div id="Absence of Additions" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI-c-2&nbsp;:&nbsp;Absence of Additions
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of a text expresses only content present in the input.&nbsp;<a href="./show/QCI-c-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Absence of Additions_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Absence of Additions')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Absence of Additions_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does the content of this text express only content present in the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts expresses only content present in the input to a higher degree?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "Looking at the Text, is all of its content expressed in the Structured Representation? (Allow duplication of content.)" </span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to input (both form and content)_prune" prune_key="-IbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to input (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCI-b&nbsp;:&nbsp;Correctness of outputs relative to input (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is correct in form and content/meaning relative to the input.&nbsp;<a href="./show/QCI-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to input (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to input (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to input (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text correct in form and content/meaning relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form and content/meaning relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to an external frame of reference_prune" prune_key="-1cEfbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to an external frame of reference" class="taxonomy_node border border-dark rounded-5 border-3 google_light_orange_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCE&nbsp;:&nbsp;Correctness of outputs relative to an external frame of reference
+						
+				<img id="Correctness of outputs relative to an external frame of reference_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs relative to an external frame of reference')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is correct relative to a system-external frame of reference.&nbsp;<a href="./show/QCE.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to an external frame of reference_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to an external frame of reference')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to an external frame of reference_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output correct relative to a system-external frame of reference?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more correct relative to a system-external frame of reference?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Correctness of outputs relative to external frame of reference (form)_prune" prune_key="-EfQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to external frame of reference (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCE-f&nbsp;:&nbsp;Correctness of outputs relative to external frame of reference (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of a text is correct relative to a system-external frame of reference.&nbsp;<a href="./show/QCE-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to external frame of reference (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to external frame of reference (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to external frame of reference (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this text correct relative to a system-external frame of reference?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form relative to a system-external frame of reference?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the generated question use correct named entity names as given in this database?" (best = all as in database)</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to external frame of reference (content)_prune" prune_key="-1cEQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to external frame of reference (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCE-c&nbsp;:&nbsp;Correctness of outputs relative to external frame of reference (content)
+						
+				<img id="Correctness of outputs relative to external frame of reference (content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Correctness of outputs relative to external frame of reference (content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content of a text is correct relative to a system-external frame of reference.&nbsp;<a href="./show/QCE-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to external frame of reference (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to external frame of reference (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to external frame of reference (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this text correct relative to a system-external frame of reference?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct content relative to a system-external frame of reference?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "are the contents of the text factually true?" (best = no untrue facts)</span>
+					</div>
+					
+			<span id="Factual truth_prune" prune_key="-1cEQC" class="taxonomy_span" style="display: block">
+				<div id="Factual truth" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCE-c-1&nbsp;:&nbsp;Factual truth
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is factually correct.&nbsp;<a href="./show/QCE-c-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Factual truth_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Factual truth')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Factual truth_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text factually correct?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts is more factually correct?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Correctness of outputs relative to external frame of reference (both form and content)_prune" prune_key="-EbQC" class="taxonomy_span" style="display: block">
+				<div id="Correctness of outputs relative to external frame of reference (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QCE-b&nbsp;:&nbsp;Correctness of outputs relative to external frame of reference (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is correct in form and content/meaning relative to a system-external frame of reference.&nbsp;<a href="./show/QCE-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Correctness of outputs relative to external frame of reference (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Correctness of outputs relative to external frame of reference (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Correctness of outputs relative to external frame of reference (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text correct in form and content/meaning relative to a system-external frame of reference?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the more correct form and content/meaning relative to a system-external frame of reference?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs (excluding correctness)_prune" prune_key="-41OI523cfEbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs (excluding correctness)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_1" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QG&nbsp;:&nbsp;Goodness of outputs (excluding correctness)
+						
+				<img id="Goodness of outputs (excluding correctness)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs (excluding correctness)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is of good quality.&nbsp;<a href="./show/QG.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs (excluding correctness)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs (excluding correctness)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs (excluding correctness)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output of good quality?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>Evaluations of this type ask in effect 'Is this output good?' with criteria in child nodes adding more detail.  In contrast to correctness criteria, it isn’t possible to state the conditions under which an output would be maximally good.  E.g. for Fluency, even if an output contains no disfluencies, there may be another way in which it could be more fluent.  It is possible to say for two outputs which is better and which is worse.  It isn’t possible to come up with a single decision mechanism for deciding when any given output is maximally good.Better is always preferrable irrespective of context.E.g. (created example): Which of these texts is best?</span>
+					</div>
+					
+			<span id="Goodness of outputs in their own right_prune" prune_key="-41O23cfbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs in their own right" class="taxonomy_node border border-dark rounded-5 border-3 google_light_yellow_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO&nbsp;:&nbsp;Goodness of outputs in their own right
+						
+				<img id="Goodness of outputs in their own right_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs in their own right')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is of good quality, looking only at the output.&nbsp;<a href="./show/QGO.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs in their own right_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs in their own right')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs in their own right_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output of good quality, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better, considering only the outputs?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Goodness of outputs in their own right (form)_prune" prune_key="-1O2fQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs in their own right (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-f&nbsp;:&nbsp;Goodness of outputs in their own right (form)
+						
+				<img id="Goodness of outputs in their own right (form)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs in their own right (form)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the form of an output is of good quality, considering only the output.&nbsp;<a href="./show/QGO-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs in their own right (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs in their own right (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs in their own right (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this output of good quality, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the better form, considering only the outputs?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "is the generated response a complete sentence (e.g. “it is in Indiana”) and not a sentence fragment (e.g. “Indiana”)?"</span>
+					</div>
+					
+			<span id="Speech quality_prune" prune_key="-1OfQG" class="taxonomy_span" style="display: block">
+				<div id="Speech quality" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-f-1&nbsp;:&nbsp;Speech quality
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of a spoken output is of good quality, considering only the output.&nbsp;<a href="./show/QGO-f-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Speech quality_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Speech quality')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Speech quality_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the spoken form of this output of good quality, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the better spoken form, considering only the output?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Nonredundancy (form)_prune" prune_key="-O2fQG" class="taxonomy_span" style="display: block">
+				<div id="Nonredundancy (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-f-2&nbsp;:&nbsp;Nonredundancy (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of an output is free of redundant elements, such as repetition and overspecificity.&nbsp;<a href="./show/QGO-f-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Nonredundancy (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Nonredundancy (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Nonredundancy (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this output is free of redundant elements, such as repetition and overspecificity?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has a form that is more free of redundant elements, such as repetition and overspecificity?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs in their own right (content)_prune" prune_key="-1O23cQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs in their own right (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c&nbsp;:&nbsp;Goodness of outputs in their own right (content)
+						
+				<img id="Goodness of outputs in their own right (content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs in their own right (content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content/meaning of an output is of good quality, considering only the output.&nbsp;<a href="./show/QGO-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs in their own right (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs in their own right (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs in their own right (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content/meaning of this output of good quality, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the better content/meaning, considering only the outputs?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Nonredundancy (content)_prune" prune_key="-1OcQG" class="taxonomy_span" style="display: block">
+				<div id="Nonredundancy (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-1&nbsp;:&nbsp;Nonredundancy (content)
+						
+				<img id="Nonredundancy (content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Nonredundancy (content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output is free of redundant elements, such as repetition and overspecificity. &nbsp;<a href="./show/QGO-c-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Nonredundancy (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Nonredundancy (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Nonredundancy (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this output is free of redundant elements, such as repetition and overspecificity?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has content that is more free of redundant elements, such as repetition and overspecificity?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Absence of unnecessary repetition (content)_prune" prune_key="-1OcQG" class="taxonomy_span" style="display: block">
+				<div id="Absence of unnecessary repetition (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-1-1&nbsp;:&nbsp;Absence of unnecessary repetition (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output is free of unnecessarily repeated elements.&nbsp;<a href="./show/QGO-c-1-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Absence of unnecessary repetition (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Absence of unnecessary repetition (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Absence of unnecessary repetition (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this output free of unnecessarily repeated elements, ignoring its form?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has fewer unnecessarily repeated elements in its conent/meaning, ignoring its form?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "Is the Text free from unnecessary repetition of content?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Information content of outputs_prune" prune_key="-O2cQG" class="taxonomy_span" style="display: block">
+				<div id="Information content of outputs" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-2&nbsp;:&nbsp;Information content of outputs
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output conveys the right amount of information.&nbsp;<a href="./show/QGO-c-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Information content of outputs_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Information content of outputs')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Information content of outputs_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does this output convey the right amount of information, looking at its content only and ignoring its form?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better at conveying the right amount of information, looking at its content only and ignoring its form?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "is the general level of details provided in the text satisfactory?", "do you personnally find the amount of information in the text optimal?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Coherence_prune" prune_key="-1O23cQG" class="taxonomy_span" style="display: block">
+				<div id="Coherence" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-3&nbsp;:&nbsp;Coherence
+						
+				<img id="Coherence_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Coherence')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content/meaning of an output is well-structured, logical and meaningful.&nbsp;<a href="./show/QGO-c-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Coherence_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Coherence')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Coherence_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content/meaning of this output well-structured, logical and meaningful, ignoring its form?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the more well-structured, logical and meaningful content/meaning, ignoring its form?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the generated text accord with the correct logic?"</span>
+					</div>
+					
+			<span id="Wellorderedness_prune" prune_key="-1O3cQG" class="taxonomy_span" style="display: block">
+				<div id="Wellorderedness" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-3-1&nbsp;:&nbsp;Wellorderedness
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output is well organised and presents inforrmation in the right order.&nbsp;<a href="./show/QGO-c-3-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Wellorderedness_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Wellorderedness')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Wellorderedness_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content/information of this output well organised and presented in the right order?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better in terms of having well organised content and presenting information in the right order?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Cohesion_prune" prune_key="-O23cQG" class="taxonomy_span" style="display: block">
+				<div id="Cohesion" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-c-3-2&nbsp;:&nbsp;Cohesion
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the different parts of the content/meaning of an output form a cohesive whole.&nbsp;<a href="./show/QGO-c-3-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Cohesion_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Cohesion')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Cohesion_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does the content/meaning of this output form a cohesive whole?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has content/meaning that forms a more cohesive whole?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>Cohesion is the grammatical and lexical linking within a text or sentence that holds a text together and gives it meaning.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs in their own right (both form and content)_prune" prune_key="-41O23bQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs in their own right (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b&nbsp;:&nbsp;Goodness of outputs in their own right (both form and content)
+						
+				<img id="Goodness of outputs in their own right (both form and content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs in their own right (both form and content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the form and content/meaning of an output is of good quality, considering only the output.&nbsp;<a href="./show/QGO-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs in their own right (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs in their own right (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs in their own right (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form and content/meaning of this output of good quality, considering only the output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the better form and content/meaning, considering only the outputs?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Readability_prune" prune_key="-1ObQG" class="taxonomy_span" style="display: block">
+				<div id="Readability" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-1&nbsp;:&nbsp;Readability
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output is easy to read.&nbsp;<a href="./show/QGO-b-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Readability_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Readability')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Readability_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output easy to read?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is easier to read?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>The degree to which an output is easy to read, the reader not having to look back and reread earlier text.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Fluency_prune" prune_key="-O2bQG" class="taxonomy_span" style="display: block">
+				<div id="Fluency" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-2&nbsp;:&nbsp;Fluency
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text flows well.&nbsp;<a href="./show/QGO-b-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Fluency_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Fluency')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Fluency_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does this text flow well?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs flows better?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>The degree to which a text ‘flows well’ and is not e.g a sequence of unconnected parts.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Understandability_prune" prune_key="-1O3bQG" class="taxonomy_span" style="display: block">
+				<div id="Understandability" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-3&nbsp;:&nbsp;Understandability
+						
+				<img id="Understandability_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Understandability')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the meaning of an output can be understood.&nbsp;<a href="./show/QGO-b-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Understandability_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Understandability')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Understandability_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree can the meaning of this output be understood?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more understandable in its meaning?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Clarity_prune" prune_key="-1O3bQG" class="taxonomy_span" style="display: block">
+				<div id="Clarity" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-3-1&nbsp;:&nbsp;Clarity
+						
+				<img id="Clarity_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Clarity')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the meaning of an output is easily understood.&nbsp;<a href="./show/QGO-b-3-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Clarity_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Clarity')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Clarity_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output easy to understand?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is easier to understand?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>The degree to which the meaning of an output is absorbed without effort, i.e., is easy to understand as well as possible to understand.</span>
+					</div>
+					
+			<span id="Speed of Understanding_prune" prune_key="-1O3bQG" class="taxonomy_span" style="display: block">
+				<div id="Speed of Understanding" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_6" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-3-1-1&nbsp;:&nbsp;Speed of Understanding
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the meaning of an output can be quickly understood.&nbsp;<a href="./show/QGO-b-3-1-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Speed of Understanding_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Speed of Understanding')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Speed of Understanding_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output quick to understand?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more quickly understood?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>The speed with which the meaning of an output is absorbed, i.e., is fast to understand as well as possible and easy to understand.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Nonredundancy (both form and content)_prune" prune_key="-4ObQG" class="taxonomy_span" style="display: block">
+				<div id="Nonredundancy (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGO-b-4&nbsp;:&nbsp;Nonredundancy (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form and content of an output is free of redundant elements, such as repetition and overspecificity.&nbsp;<a href="./show/QGO-b-4.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Nonredundancy (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Nonredundancy (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Nonredundancy (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form and content of this output is free of redundant elements, such as repetition and overspecificity?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more free of redundant elements, such as repetition and overspecificity, in both its form and content?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to input_prune" prune_key="-I1cfbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to input" class="taxonomy_node border border-dark rounded-5 border-3 google_light_red_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGI&nbsp;:&nbsp;Goodness of outputs relative to input
+						
+				<img id="Goodness of outputs relative to input_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to input')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which a text is good relative to the input.&nbsp;<a href="./show/QGI.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to input_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to input')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to input_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text good relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts is better relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Goodness of outputs relative to input (form)_prune" prune_key="-IfQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to input (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGI-f&nbsp;:&nbsp;Goodness of outputs relative to input (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of a text is good relative to the input.&nbsp;<a href="./show/QGI-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to input (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to input (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to input (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this text good relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the better form relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. in paraphrasing: "is the surface form of the output different enough from that of the input?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to input (content)_prune" prune_key="-I1cQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to input (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGI-c&nbsp;:&nbsp;Goodness of outputs relative to input (content)
+						
+				<img id="Goodness of outputs relative to input (content)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to input (content)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the content of a text is good relative to the input.&nbsp;<a href="./show/QGI-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to input (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to input (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to input (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this text good relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the better content relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the output text include the important content from inputs?"</span>
+					</div>
+					
+			<span id="Answerability from input_prune" prune_key="-I1cQG" class="taxonomy_span" style="display: block">
+				<div id="Answerability from input" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGI-c-1&nbsp;:&nbsp;Answerability from input
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output (typically a question) can be answered with content/information from the input.&nbsp;<a href="./show/QGI-c-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Answerability from input_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Answerability from input')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Answerability from input_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree can the output (question) be answered with content/information from the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs (questions) can be answered to a greater extent with information from the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to input (both form and content)_prune" prune_key="-IbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to input (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGI-b&nbsp;:&nbsp;Goodness of outputs relative to input (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a text is good in form and content/meaning relative to the input.&nbsp;<a href="./show/QGI-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to input (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to input (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to input (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this text good in form and content/meaning relative to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these texts has the better form and content/meaning relative to the input?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the output text reflect the input topic labels?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to an external frame of reference_prune" prune_key="-41523cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to an external frame of reference" class="taxonomy_node border border-dark rounded-5 border-3 google_light_orange_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE&nbsp;:&nbsp;Goodness of outputs relative to an external frame of reference
+						
+				<img id="Goodness of outputs relative to an external frame of reference_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to an external frame of reference')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good relative to a system-external frame of reference.&nbsp;<a href="./show/QGE.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to an external frame of reference_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to an external frame of reference')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to an external frame of reference_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output good relative to a system-external frame of reference?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better relative to a system-external frame of reference?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Goodness of outputs relative to linguistic context in which they are read/heard_prune" prune_key="-12cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to linguistic context in which they are read/heard" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1&nbsp;:&nbsp;Goodness of outputs relative to linguistic context in which they are read/heard
+						
+				<img id="Goodness of outputs relative to linguistic context in which they are read/heard_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to linguistic context in which they are read/heard')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good relative to the linguistic context as a frame of reference.&nbsp;<a href="./show/QGE-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to linguistic context in which they are read/heard_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to linguistic context in which they are read/heard')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to linguistic context in which they are read/heard_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How good is this output relative to the linguistic context in which it is read/heard?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better relative to the linguistic context in which they are read/heard?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Naturalness_prune" prune_key="-1cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Naturalness" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-1&nbsp;:&nbsp;Naturalness
+						
+				<img id="Naturalness_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Naturalness')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the output is likely to be used by a native speaker in the given context/situation.&nbsp;<a href="./show/QGE-1-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Naturalness_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Naturalness')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Naturalness_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output likely to be used by a native speaker in this context/situation?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more likely to be used by a native speaker in this context/situation?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Naturalness (form)_prune" prune_key="-1EfQG" class="taxonomy_span" style="display: block">
+				<div id="Naturalness (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-1-f&nbsp;:&nbsp;Naturalness (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of an output is likely to be produced by a native speaker in the given context/situation.&nbsp;<a href="./show/QGE-1-1-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Naturalness (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Naturalness (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Naturalness (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Naturalness (content)_prune" prune_key="-1cEQG" class="taxonomy_span" style="display: block">
+				<div id="Naturalness (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-1-c&nbsp;:&nbsp;Naturalness (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output is likely to be chosen by a native speaker in the given context/situation.&nbsp;<a href="./show/QGE-1-1-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Naturalness (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Naturalness (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Naturalness (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Naturalness (both form and content)_prune" prune_key="-1EbQG" class="taxonomy_span" style="display: block">
+				<div id="Naturalness (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-1-b&nbsp;:&nbsp;Naturalness (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form and content of an output is likely to be produced/chosen by a native speaker in the given context/situation.&nbsp;<a href="./show/QGE-1-1-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Naturalness (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Naturalness (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Naturalness (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] None</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Appropriateness_prune" prune_key="-12cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Appropriateness" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-2&nbsp;:&nbsp;Appropriateness
+						
+				<img id="Appropriateness_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Appropriateness')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which the output is appropriate in the given context/situation.&nbsp;<a href="./show/QGE-1-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Appropriateness_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Appropriateness')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Appropriateness_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output appropriate in this context/situation?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more appropriate in this context/situation?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Appropriateness (form)_prune" prune_key="-12EfQG" class="taxonomy_span" style="display: block">
+				<div id="Appropriateness (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-2-f&nbsp;:&nbsp;Appropriateness (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of the output is appropriate in the given context/situation.&nbsp;<a href="./show/QGE-1-2-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Appropriateness (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Appropriateness (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Appropriateness (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the form of this output appropriate in this context/situation?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the more appropriate form in this context/situation?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "are the lexical choices appropriate given the target reader (expert VS layperson, adult VS child, etc.)?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Appropriateness (content)_prune" prune_key="-12cEQG" class="taxonomy_span" style="display: block">
+				<div id="Appropriateness (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-2-c&nbsp;:&nbsp;Appropriateness (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of the output is appropriate in the given context/situation.&nbsp;<a href="./show/QGE-1-2-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Appropriateness (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Appropriateness (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Appropriateness (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is the content of this output appropriate in this context/situation?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has the more appropriate content in this context/situation?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "is the question coherent with other generated questions?", "is the text size is optimal for this use case?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Appropriateness (both form and content)_prune" prune_key="-12EbQG" class="taxonomy_span" style="display: block">
+				<div id="Appropriateness (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-1-2-b&nbsp;:&nbsp;Appropriateness (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form and content of the output is appropriate in the given context/situation.&nbsp;<a href="./show/QGE-1-2-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Appropriateness (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Appropriateness (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Appropriateness (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output appropriate in this context/situation?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more appropriate in this context/situation?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the text appropriately consider the parents’ emotional state in the given scenario?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to how humans use language_prune" prune_key="-12cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to how humans use language" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-2&nbsp;:&nbsp;Goodness of outputs relative to how humans use language
+						
+				<img id="Goodness of outputs relative to how humans use language_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to how humans use language')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good relative to human language use as a frame of reference.&nbsp;<a href="./show/QGE-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to how humans use language_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to how humans use language')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to how humans use language_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How good is this output relative to how humans use language?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better relative to how humans use language?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Humanlikeness_prune" prune_key="-12cEfbQG" class="taxonomy_span" style="display: block">
+				<div id="Humanlikeness" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-2-1&nbsp;:&nbsp;Humanlikeness
+						
+				<img id="Humanlikeness_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Humanlikeness')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output could have been produced by a human.&nbsp;<a href="./show/QGE-2-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Humanlikeness_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Humanlikeness')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Humanlikeness_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree could this output have been produced by a human?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more likely to have been produced by a human?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>The degree to which an output could have been produced by a human. Can be evaluated e.g. via assessing similarity with human-authored text.</span>
+					</div>
+					
+			<span id="Humanlikeness (form)_prune" prune_key="-12EfQG" class="taxonomy_span" style="display: block">
+				<div id="Humanlikeness (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-2-1-f&nbsp;:&nbsp;Humanlikeness (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of an output could have been produced by a human.&nbsp;<a href="./show/QGE-2-1-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Humanlikeness (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Humanlikeness (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Humanlikeness (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree could the form of this output have been produced by a human?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] The form of which of these outputs is more likely to have been produced by a human?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Humanlikeness (content)_prune" prune_key="-12cEQG" class="taxonomy_span" style="display: block">
+				<div id="Humanlikeness (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-2-1-c&nbsp;:&nbsp;Humanlikeness (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output could have been produced by a human.&nbsp;<a href="./show/QGE-2-1-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Humanlikeness (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Humanlikeness (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Humanlikeness (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree could the content of this output have been produced by a human?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] The content of which of these outputs is more likely to have been produced by a human?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Humanlikeness (both form and content)_prune" prune_key="-12EbQG" class="taxonomy_span" style="display: block">
+				<div id="Humanlikeness (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-2-1-b&nbsp;:&nbsp;Humanlikeness (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form and content of an output could have been produced by a human.&nbsp;<a href="./show/QGE-2-1-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Humanlikeness (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Humanlikeness (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Humanlikeness (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree could the form and content of this output have been produced by a human?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] The form and content of which of these outputs is more likely to have been produced by a human?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to system use_prune" prune_key="-41523EQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to system use" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3&nbsp;:&nbsp;Goodness of outputs relative to system use
+						
+				<img id="Goodness of outputs relative to system use_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to system use')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good relative to system use as a frame of reference.&nbsp;<a href="./show/QGE-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to system use_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to system use')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to system use_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Goodness as system explanation_prune" prune_key="-13EQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness as system explanation" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-1&nbsp;:&nbsp;Goodness as system explanation
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good as an explanation of system behaviour.&nbsp;<a href="./show/QGE-3-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness as system explanation_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness as system explanation')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness as system explanation_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How good is this output as an explanation of system behaviour?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is better as an explanation of system behaviour?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the text provide an explanation that helps users understand the decision the system has come to?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Usability_prune" prune_key="-23EQG" class="taxonomy_span" style="display: block">
+				<div id="Usability" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-2&nbsp;:&nbsp;Usability
+						
+					</h5>
+					<p style="cursor: default;">The degree to which users find the system in which the generated outputs are used easy to use.&nbsp;<a href="./show/QGE-3-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Usability_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Usability')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Usability_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How usable is this system?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of the versions of this system is more usable?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. direct usability ratings for the system, or questions like "do the output texts contribute to the usability of the system?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="User satisfaction_prune" prune_key="-3EQG" class="taxonomy_span" style="display: block">
+				<div id="User satisfaction" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-3&nbsp;:&nbsp;User satisfaction
+						
+					</h5>
+					<p style="cursor: default;">The degree to which users are satisfied with the system in which the generated outputs are used.&nbsp;<a href="./show/QGE-3-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="User satisfaction_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('User satisfaction')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="User satisfaction_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How satisfied are you with this system?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of the versions of this system are you more satisfied with?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. in a dialogue system "how satisfied were you with the booking you just made?", "how much did you like the system?", counting number of likes output texts get</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Ease of communication_prune" prune_key="-43EQG" class="taxonomy_span" style="display: block">
+				<div id="Ease of communication" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-4&nbsp;:&nbsp;Ease of communication
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the outputs make communication easy, typically in a dialogue situation.&nbsp;<a href="./show/QGE-3-4.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Ease of communication_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Ease of communication')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Ease of communication_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How easy is it to communicate with the system?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of the versions of this system is easier to communicate with?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "how smoothly did the conversation go with the virtual agent?" </span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Usefulness (nonspecific)_prune" prune_key="-153EQG" class="taxonomy_span" style="display: block">
+				<div id="Usefulness (nonspecific)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-5&nbsp;:&nbsp;Usefulness (nonspecific)
+						
+				<img id="Usefulness (nonspecific)_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Usefulness (nonspecific)')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is useful.&nbsp;<a href="./show/QGE-3-5.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Usefulness (nonspecific)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Usefulness (nonspecific)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Usefulness (nonspecific)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How useful is this output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more useful?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. measuring task success, "did you find the system advice useful?", "did you find the text useful?"</span>
+					</div>
+					
+			<span id="Usefulness for task/information need_prune" prune_key="-153EQG" class="taxonomy_span" style="display: block">
+				<div id="Usefulness for task/information need" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-3-5-1&nbsp;:&nbsp;Usefulness for task/information need
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output is useful for a given task or information need.&nbsp;<a href="./show/QGE-3-5-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Usefulness for task/information need_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Usefulness for task/information need')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Usefulness for task/information need_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How useful is this output for this task/information need?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more useful for this task/information need?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the description help you to navigate a text in spite of its longer length?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Goodness of outputs relative to grounding_prune" prune_key="-41EQG" class="taxonomy_span" style="display: block">
+				<div id="Goodness of outputs relative to grounding" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-4&nbsp;:&nbsp;Goodness of outputs relative to grounding
+						
+				<img id="Goodness of outputs relative to grounding_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Goodness of outputs relative to grounding')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is good relative to grounding in another modality and/or real-world or virtual-world objects as a frame of reference.&nbsp;<a href="./show/QGE-4.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Goodness of outputs relative to grounding_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Goodness of outputs relative to grounding')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Goodness of outputs relative to grounding_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Referent resolvability_prune" prune_key="-41EQG" class="taxonomy_span" style="display: block">
+				<div id="Referent resolvability" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QGE-4-1&nbsp;:&nbsp;Referent resolvability
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the referents of the referring expressions in an output can be identified.&nbsp;<a href="./show/QGE-4-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Referent resolvability_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Referent resolvability')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Referent resolvability_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree can the referent of the referring expressions in this output be identified?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs has referring expressions make it easier to identify the referent?</span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "how easily can you find the object in the image based on the phrase given?",  "how easy is it to identify who the referring expressions are referring to?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Feature-type criteria_prune" prune_key="-1O23cfFEbQB" class="taxonomy_span" style="display: block">
+				<div id="Feature-type criteria" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_1" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QF&nbsp;:&nbsp;Feature-type criteria
+						
+				<img id="Feature-type criteria_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Feature-type criteria')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">&nbsp;<a href="./show/QF.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Feature-type criteria_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Feature-type criteria')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Feature-type criteria_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>For this type of criterion it doesn’t typically make sense to say that outputs generally (independent of evaluation context) are better or worse in terms of the criterion x; it would normally be more natural to say they are more x or less x. For example,we would say outputs are more specific or less specific, not outputs are, in the general case, better when they are more specific.Whether want more x or less x, or whether x is even applicable, depends on the context.E.g. (created example): Which of these two texts is more x?</span>
+					</div>
+					
+			<span id="Feature-type criteria assessed looking at outputs in their own right_prune" prune_key="-1O2cfFbQ" class="taxonomy_span" style="display: block">
+				<div id="Feature-type criteria assessed looking at outputs in their own right" class="taxonomy_node border border-dark rounded-5 border-3 google_light_yellow_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFO&nbsp;:&nbsp;Feature-type criteria assessed looking at outputs in their own right
+						
+				<img id="Feature-type criteria assessed looking at outputs in their own right_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Feature-type criteria assessed looking at outputs in their own right')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">&nbsp;<a href="./show/QFO.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Feature-type criteria assessed looking at outputs in their own right_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Feature-type criteria assessed looking at outputs in their own right')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Feature-type criteria assessed looking at outputs in their own right_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Text Property_prune" prune_key="-1O2cfFbQ" class="taxonomy_span" style="display: block">
+				<div id="Text Property" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFO-1&nbsp;:&nbsp;Text Property
+						
+				<img id="Text Property_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Text Property')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output has a specific property (not a controlled feature). Open class criterion.&nbsp;<a href="./show/QFO-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Text Property_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Text Property')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Text Property_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'>PROPERTY</span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the text have the characteristics of a poem?", "do the words used in the text convey positiveness in general?", "is the text written is simple English?"</span>
+					</div>
+					
+			<span id="Text Property [Complexity/simplicity (both form and content)]_prune" prune_key="-1O2cfFbQ" class="taxonomy_span" style="display: block">
+				<div id="Text Property [Complexity/simplicity (both form and content)]" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFO-1-2-b&nbsp;:&nbsp;Text Property [Complexity/simplicity (both form and content)]
+						
+				<img id="Text Property [Complexity/simplicity (both form and content)]_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Text Property [Complexity/simplicity (both form and content)]')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output as a whole is [complex/simple].&nbsp;<a href="./show/QFO-1-2-b.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Text Property [Complexity/simplicity (both form and content)]_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Text Property [Complexity/simplicity (both form and content)]')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Text Property [Complexity/simplicity (both form and content)]_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How [complex/simple] is this output?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more [complex/simple]?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Text Property [Complexity/simplicity (form)]_prune" prune_key="-1O2fFQ" class="taxonomy_span" style="display: block">
+				<div id="Text Property [Complexity/simplicity (form)]" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFO-1-2-f&nbsp;:&nbsp;Text Property [Complexity/simplicity (form)]
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output is expressed in [complex/simple] terms.&nbsp;<a href="./show/QFO-1-2-f.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Text Property [Complexity/simplicity (form)]_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Text Property [Complexity/simplicity (form)]')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Text Property [Complexity/simplicity (form)]_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree is this output expressed in [complex/simple] terms?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is expressed in more [complex/simple] terms?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the generated text contain a lot of technical or specialist words?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Text Property [Complexity/simplicity (content)]_prune" prune_key="-1O2cFQ" class="taxonomy_span" style="display: block">
+				<div id="Text Property [Complexity/simplicity (content)]" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_5" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFO-1-2-c&nbsp;:&nbsp;Text Property [Complexity/simplicity (content)]
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output conveys [complex/simple] content/meaning/information.&nbsp;<a href="./show/QFO-1-2-c.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Text Property [Complexity/simplicity (content)]_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Text Property [Complexity/simplicity (content)]')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Text Property [Complexity/simplicity (content)]_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] To what degree does this output convey [complex/simple] content/meaning/information?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs conveys more [complex/simple] content/meaning/information?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the generated question involve reasoning over multiple sentences from the document?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Feature-type criteria assessed looking at outputs and inputs_prune" prune_key="-123FQB" class="taxonomy_span" style="display: block">
+				<div id="Feature-type criteria assessed looking at outputs and inputs" class="taxonomy_node border border-dark rounded-5 border-3 google_light_red_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB&nbsp;:&nbsp;Feature-type criteria assessed looking at outputs and inputs
+						
+				<img id="Feature-type criteria assessed looking at outputs and inputs_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Feature-type criteria assessed looking at outputs and inputs')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">&nbsp;<a href="./show/QFB.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Feature-type criteria assessed looking at outputs and inputs_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Feature-type criteria assessed looking at outputs and inputs')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Feature-type criteria assessed looking at outputs and inputs_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Detectability of controlled feature_prune" prune_key="-1FQB" class="taxonomy_span" style="display: block">
+				<div id="Detectability of controlled feature" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB-1&nbsp;:&nbsp;Detectability of controlled feature
+						
+					</h5>
+					<p style="cursor: default;">The degree to which a property that the outputs are intended to have (i.e.because it's controlled in the generation process) is detectable in the output. Open class criterion.&nbsp;<a href="./show/QFB-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Detectability of controlled feature_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Detectability of controlled feature')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Detectability of controlled feature_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'>PROPERTY</span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "does the text convey the targeted sentiment (i.e. in accordance with what is specified in the input)?", "does the text have the opposite stance of the input?", "which of these texts is more empathetic?" (where empathy is controlled by input feature)</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Difference/similarity to input_prune" prune_key="-123FQB" class="taxonomy_span" style="display: block">
+				<div id="Difference/similarity to input" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB-2&nbsp;:&nbsp;Difference/similarity to input
+						
+				<img id="Difference/similarity to input_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Difference/similarity to input')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">The degree to which an output is [different/similar] to the input.&nbsp;<a href="./show/QFB-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Difference/similarity to input_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Difference/similarity to input')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Difference/similarity to input_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How [different/similar] is this output to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more [different/similar] to the input?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Difference/similarity to input (form)_prune" prune_key="-12FQB" class="taxonomy_span" style="display: block">
+				<div id="Difference/similarity to input (form)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_green_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB-2-1&nbsp;:&nbsp;Difference/similarity to input (form)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the form of an output is [different/similar] to the input.&nbsp;<a href="./show/QFB-2-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Difference/similarity to input (form)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Difference/similarity to input (form)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Difference/similarity to input (form)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How [different/similar] is the form of this output to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more [different/similar] to the input in its form?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "More dissimilar phrasing:  Does the rewritten version use different words or phrasing to the original? You should choose the system that uses the most different words or word order." </span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Difference/similarity to input (content)_prune" prune_key="-2FQB" class="taxonomy_span" style="display: block">
+				<div id="Difference/similarity to input (content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_cornflower_blue_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB-2-2&nbsp;:&nbsp;Difference/similarity to input (content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the content of an output is [different/similar] to the input.&nbsp;<a href="./show/QFB-2-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Difference/similarity to input (content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Difference/similarity to input (content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Difference/similarity to input (content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How [different/similar] is the content of this output to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more [different/similar] to the input in its content?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Difference/similarity to input (both form and content)_prune" prune_key="-23FQB" class="taxonomy_span" style="display: block">
+				<div id="Difference/similarity to input (both form and content)" class="taxonomy_node border border-dark rounded-5 border-3 google_light_purple_3 taxonomy_search_node taxonomy_search_node_d_4" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFB-2-3&nbsp;:&nbsp;Difference/similarity to input (both form and content)
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output is [different/similar] to the input.&nbsp;<a href="./show/QFB-2-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Difference/similarity to input (both form and content)_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Difference/similarity to input (both form and content)')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Difference/similarity to input (both form and content)_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] How [different/similar] is this output to the input?</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] Which of these outputs is more [different/similar] to the input?</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+			<span id="Feature-type criteria assessed looking at outputs and external frame of reference_prune" prune_key="-123EFQ" class="taxonomy_span" style="display: block">
+				<div id="Feature-type criteria assessed looking at outputs and external frame of reference" class="taxonomy_node border border-dark rounded-5 border-3 google_light_orange_3 taxonomy_search_node taxonomy_search_node_d_2" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFE&nbsp;:&nbsp;Feature-type criteria assessed looking at outputs and external frame of reference
+						
+				<img id="Feature-type criteria assessed looking at outputs and external frame of reference_button" src="./static/img/plus.png" data-toggle="tooltip" data-placement="right" title="Show child nodes." width="24" height="24" onclick="toggleCollapse('Feature-type criteria assessed looking at outputs and external frame of reference')" style="cursor: pointer; margin-left: 10px;"/>
+			
+					</h5>
+					<p style="cursor: default;">&nbsp;<a href="./show/QFE.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Feature-type criteria assessed looking at outputs and external frame of reference_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Feature-type criteria assessed looking at outputs and external frame of reference')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Feature-type criteria assessed looking at outputs and external frame of reference_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'></span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>None.</span>
+					</div>
+					
+			<span id="Effect on reader/listener_prune" prune_key="-1EFQ" class="taxonomy_span" style="display: block">
+				<div id="Effect on reader/listener" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFE-1&nbsp;:&nbsp;Effect on reader/listener
+						
+					</h5>
+					<p style="cursor: default;">The degree to which an output has an EFFECT in the listener/reader. Open class criterion.&nbsp;<a href="./show/QFE-1.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Effect on reader/listener_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Effect on reader/listener')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Effect on reader/listener_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'>EFFECT</span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. measuring how much the user learnt from reading the output; "are you feeling sad after reading the text?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Inferrability of speaker/author stance_prune" prune_key="-2EFQ" class="taxonomy_span" style="display: block">
+				<div id="Inferrability of speaker/author stance" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFE-2&nbsp;:&nbsp;Inferrability of speaker/author stance
+						
+					</h5>
+					<p style="cursor: default;">The degree to which the speaker’s/author’s stance towards an OBJECT is inferrable from the text. Stance is always positive/negative (with possible intermediate value(s)), but might be phrased differently, e.g.supports/doesn't support, is friendly towards/is hostile towards, etc. Open-class criterion.&nbsp;<a href="./show/QFE-2.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Inferrability of speaker/author stance_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Inferrability of speaker/author stance')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Inferrability of speaker/author stance_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'>OBJECT</span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "rank these texts in order of positivity expressed towards the company?", "is the text making fun of the government/the president?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+			<span id="Inferrability of speaker/author trait_prune" prune_key="-3EFQ" class="taxonomy_span" style="display: block">
+				<div id="Inferrability of speaker/author trait" class="taxonomy_node border border-dark rounded-5 border-3 google_light_grey_3 taxonomy_search_node taxonomy_search_node_d_3" style="display: none; max-width:1500px;">
+
+				
+
+					<h5 data-toggle="tooltip" data-placement="right" title="Placeholder deciding question ..." style="cursor: pointer;">
+						QFE-3&nbsp;:&nbsp;Inferrability of speaker/author trait
+						
+					</h5>
+					<p style="cursor: default;">The degree to which it is inferrable from the output whether the speaker/author has a TRAIT. Open-class criterion.&nbsp;<a href="./show/QFE-3.html" target="_blank"><img src="./static/img/magnify.png" data-toggle="tooltip" data-placement="right" title="Open a screen showing details of this quality criterion." width="24" height="24" style="cursor: pointer; margin-right:10px;"></a>
+					</p>
+					<p id="Inferrability of speaker/author trait_toggle" style="cursor: pointer; text-decoration: underline; font-style: italic;" class="link-primary" onclick="toggleDetails('Inferrability of speaker/author trait')" data-toggle="tooltip" data-placement="right" title="Show the details of this node below.">show details</p>
+					<div id="Inferrability of speaker/author trait_details" class="taxonomy_node_details" style="margin-bottom: 10px; display:none;">
+						<span class='att_key'>Suggested question to evaluators in subjective, intrinsic, absolute mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Suggested question to evaluators in subjective, intrinsic, relative mode:</span><br /><span class='att_value'>[generic] n/a</span><br/><span class='att_key'>Feature Type Label:</span><br /><span class='att_value'>TRAIT</span><br/><span class='att_key'>Feature Type Examples:</span><br /><span class='att_value'></span><br/><span class='att_key'>Additional notes and information:</span><br /><span class='att_value'>E.g. "who among the writers of these texts do you think is the most conscientious?", "which of these people do you think wrote the text?", "does the text express signs of the neurotic personality type?"</span>
+					</div>
+					
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+				</div>
+			</span>
+		
+    </div>
+
+    </div>
+</body>
+</html>

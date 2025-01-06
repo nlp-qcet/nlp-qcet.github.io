@@ -1,0 +1,91 @@
+body {
+  padding: 10px;
+}
+
+div.pad {
+  padding: 20px;
+}
+
+li {
+  margin-left: 20px;
+}
+
+div.google_light_green_3 {
+  background-color: #d9ead3;
+}
+
+div.google_light_yellow_3 {
+  background-color: #fff2cc;
+}
+
+div.google_light_cornflower_blue_3 {
+  background-color: #c9daf8;
+}
+
+div.google_light_grey_3 {
+  background-color: #f3f3f3;
+}
+
+div.google_light_red_3 {
+  background-color: #f4cccc;
+}
+
+div.google_light_orange_3 {
+  background-color: #fce5cd;
+}
+
+div.google_light_purple_3 {
+  background-color: #d9d2e9;
+}
+
+div.taxonomy_search_node {
+/*	width: 1000px;
+	height: 100px;*/
+/*  margin: 10px;
+  margin-right: 40px;*/
+  margin-bottom: 5px;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+div.taxonomy_search_node_d0 {
+  /*margin-left: 0px;*/
+}
+
+div.taxonomy_search_node_d1 {
+  /*margin-left: 20px;*/
+}
+
+div.taxonomy_search_node_d2 {
+  /*margin-left: 40px;*/
+}
+
+div.taxonomy_search_node_d3 {
+  /*margin-left: 60px;*/
+}
+
+div.taxonomy_search_node_d4 {
+  /*margin-left: 80px;*/
+}
+
+div.taxonomy_search_node_d5 {
+  /*margin-left: 100px;*/
+}
+
+div.taxonomy_search_node_d6 {
+  /*margin-left: 120px;*/
+}
+
+div.taxonomy_search_node_d7 {
+  /*margin-left: 140px;*/
+}
+
+span.att_key {
+  font-weight: bold;
+  color: #444444;
+}
+
+span.att_value {
+  padding-left: 15px;
+  font-style: italic;
+}
