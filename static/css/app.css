@@ -26,6 +26,11 @@ div.google_light_grey_3 {
   background-color: #f3f3f3;
 }
 
+div.google_light_grey_2 {
+  background-color: #efefef;
+}
+
+
 div.google_light_red_3 {
   background-color: #f4cccc;
 }
@@ -36,6 +41,24 @@ div.google_light_orange_3 {
 
 div.google_light_purple_3 {
   background-color: #d9d2e9;
+}
+
+div.google_light_berry_3 {
+  background-color: #e6b8af;
+}
+
+
+
+div.correctness_colour {
+  background-color: #e0ddd0;
+}
+
+div.goodness_colour {
+  background-color: #d0dcdc;
+}
+
+div.feature_colour {
+  background-color: #ebe5eb;
 }
 
 div.taxonomy_search_node {
@@ -86,6 +109,5 @@ span.att_key {
 }
 
 span.att_value {
-  padding-left: 15px;
-  font-style: italic;
+
 }
