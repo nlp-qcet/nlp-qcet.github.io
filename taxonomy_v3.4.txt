@@ -1,0 +1,159 @@
+Q:QUALITY OF OUTPUTS
+        QO:Quality of outputs in their own right
+                QOC:CORRECTNESS
+                        QOC-f:Correctness of outputs in their own right, Form
+                                QOC-f-1:Grammaticality
+                                QOC-f-2:Spelling Accuracy
+                                QOC-f-3:Pronunciation Accuracy
+                        QOC-c:Correctness of outputs in their own right, content/meaning
+                                QOC-c-1:Semantic Correctness
+                        QOC-w:Correctness of outputs in their own right, Outputs as a whole
+                                QOC-w-1:Correctness of Outputs (outputs as a whole)
+                QOG:GOODNESS
+                        QOG-f:Goodness of outputs in their own right, Form
+                                QOG-f-1:Nonredundancy (form)
+                                QOG-f-2:Speech Quality
+                        QOG-c:Goodness of outputs in their own right, content/meaning
+                                QOG-c-1:Nonredundancy (content/meaning)
+                                QOG-c-2:Informativeness
+                                QOG-c-3:Coherence
+                                        QOG-c-3.1:Wellorderedness
+                                        QOG-c-3.2:Cohesiveness
+                                QOG-c-4:Internal Consistency of Outputs
+                        QOG-w:Goodness of outputs in their own right, Outputs as a whole
+                                QOG-w-1:Nonredundancy (output as a whole)
+                                QOG-w-2:Readability
+                                QOG-w-3:Fluency
+                                QOG-w-4:Humanlikeness
+                                        QOG-w-4.1:Native Speaker Likeness
+                                        QOG-w-4.2:Non-AI Likeness
+                                QOG-w-5:Understandability
+                                        QOG-w-5.1:Clarity
+                                                QOG-w-5.1.1:Speed of Understanding
+                QOF:FEATURE
+                        QOF-f:Feature of outputs in their own right, Form
+                                QOF-f-1:Diversity/Non-diversity (form)
+                                QOF-f-2:Poeticness/Non-poeticness (form)
+                                QOF-f-3:Complexity/Non-complexity (form)
+                                QOF-f-4:Formality/Informality
+                                QOF-f-5:Output Length
+                        QOF-c:Feature of outputs in their own right, content/meaning
+                                QOF-c-1:Diversity/Non-diversity (content/meaning)
+                                QOF-c-2:Poeticness/Non-poeticness (content/meaning)
+                                QOF-c-3:Complexity/Non-complexity (content/meaning)
+                        QOF-w:Feature of outputs in their own right, Outputs as a whole
+                                QOF-w-1:Diversity/Non-diversity (outputs as a whole)
+                                QOF-w-2:Poeticness/Non-poeticness (outputs as a whole)
+                                QOF-w-3:Complexity/Non-complexity (outputs as a whole)
+                                QOF-w-4:Conversationality/Non-conversationality
+                                QOF-w-5:Humorousness/Non-humorousness
+        QI:Quality of outputs relative to input
+                QIC:CORRECTNESS
+                        QIC-f:Correctness of outputs relative to input, Form
+                                QIC-f-1:Conformance to Syntactic Structure (given in input)
+                                QIC-f-2:Inclusion of Keywords (given in input)
+                        QIC-c:Correctness of outputs relative to input, content/meaning
+                                QIC-c-1:Absence of Omissions (relative to input)
+                                QIC-c-2:Absence of Additions (relative to input)
+                                QIC-c-3:Consistency with Input
+                                QIC-c-4:Coverage of Topics (given in input)
+                        QIC-w:Correctness of outputs relative to input, Outputs as a whole
+                                QIC-w-1:Translation Accuracy
+                QIG:GOODNESS
+                        QIG-f:Goodness of outputs relative to input, Form
+                                QIG-f-1:Appropriateness of System Response Type
+                                QIG-f-2:Success of Style Transfer from Sample
+                                        QIG-f-2.1:Success of Speech Style Transfer from Sample
+                        QIG-c:Goodness of outputs relative to input, content/meaning
+                                QIG-c-1:Answerability from Input
+                                QIG-c-3:Relevance to Input
+                        QIG-w:Goodness of outputs relative to input, Outputs as a whole
+                                QIG-w-1:Parse Accuracy (reference-less)
+                                QIG-w-2:Degree to which Output Answers Question in Input
+                                QIG-w-3:Quality as Explanation of Input
+                QIF:FEATURE
+                        QIF-f:Feature of outputs relative to input, Form
+                                QIF-f-1:Control over Complexity/Non-complexity (form)
+                                QIF-f-2:Control over Style
+                                        QIF-f-2.1:Control over Formality/Informality
+                                QIF-f-3:Output Size Relative to Input
+                                QIF-f-4:Similarity/Dissimilarity to Input (form)
+                        QIF-c:Feature of outputs relative to input, content/meaning
+                                QIF-c-1:Control over Complexity/Non-complexity (content/meaning)
+                                QIF-c-2:Similarity/Dissimilarity to Input (content/meaning)
+                                QIF-c-3:Specificity/Non-specificity (relative to input)
+                        QIF-w:Feature of outputs relative to input, Outputs as a whole
+                                QIF-w-1:Control over Complexity/Non-complexity (outputs as a whole)
+                                QIF-w-2:Control over Sentiment
+                                QIF-w-3:Bias Inversion
+                                QIF-w-4:Similarity/Dissimilarity to Input (outputs as a whole)
+                                QIF-w-5:Control over Multiple Attributes
+        QT:Quality of outputs relative to target outputs sampled from the same distribution as the system was trained on (+/- input)
+                QTC:CORRECTNESS
+                        QTC-f:Correctness of outputs relative to target outputs (+/- input), Form
+                                QTC-f-1:Form Accuracy
+                        QTC-c:Correctness of outputs relative to target outputs (+/- input), Content/meaning
+                                QTC-c-1:Meaning Accuracy
+                        QTC-w:Correctness of outputs relative to target outputs (+/- input), Outputs as a whole
+                                QTC-w-1:Classification Accuracy
+                                QTC-w-2:Sequence Labelling Accuracy
+                                QTC-w-3:Complete Target Output Matching
+                                        QTC-w-3.1:Complete Word Matching
+                                        QTC-w-3.2:Character Matching
+                                QTC-w-4:Retrieval Accuracy
+                                QTC-w-5:Sequence Alignment Accuracy
+                                QTC-w-6:Parse Accuracy (with references)
+                QTG:GOODNESS
+                        QTG-f:Goodness of outputs relative to target outputs (+/- input), Form
+                                QTG-f-1:Similarity to Target Outputs (form)
+                        QTG-c:Goodness of outputs relative to target outputs (+/- input), content/meaning
+                                QTG-c-1:Similarity to Target Outputs (content/meaning)
+                        QTG-w:Goodness of outputs relative to target outputs (+/- input), Outputs as a whole
+                                QTG-w-1:Similarity to Target Outputs (outputs as a whole)
+                                QTG-w-2:Similarity to Inputs and Target Outputs Combined (outputs as a whole)
+                                QTG-w-3:Cross-Dataset Generalisation
+        QE:Quality of outputs relative to a specified external frame of reference (+/- input)
+                QEC:CORRECTNESS
+                        QEC-f:Correctness of outputs relative to a specified external frame of reference (+/- input), Form
+                                QEC-f-1:Adherence to Style Guide
+                                QEC-f-2:Adherence to Syntactic Rules
+                        QEC-c:Correctness of outputs relative to a specified external frame of reference (+/- input), content/meaning
+                                QEC-c-1:Factual Truth
+                                QEC-c-2:Relative Factual Accuracy
+                        QEC-w:Correctness of outputs relative to a specified external frame of reference (+/- input), Outputs as a whole
+                                QEC-w-1:Functional Correctness
+                QEG:GOODNESS
+                        QEG-f:Goodness of outputs relative to a specified external frame of reference (+/- input), Form
+                                QEG-f-1:Naturalness (form)
+                                QEG-f-2:Appropriateness (form)
+                        QEG-c:Goodness of outputs relative to a specified external frame of reference (+/- input), content/meaning
+                                QEG-c-1:Naturalness (content/meaning)
+                                QEG-c-2:Appropriateness (content/meaning)
+                        QEG-w:Goodness of outputs relative to a specified external frame of reference (+/- input), Outputs as a whole
+                                QEG-w-1:Naturalness (outputs as a whole)
+                                QEG-w-2:Appropriateness (outputs as a whole)
+                                QEG-w-3:Usefulness (nonspecific)
+                                        QEG-w-3.1:Usefulness for Task/Information Need
+                                QEG-w-4:Goodness as Explanation of System Behaviour
+                                QEG-w-5:System Usability as Affected by Outputs
+                                        QEG-w-5.1:Ease of Communication
+                                        QEG-w-5.2:Task Completion Speed
+                                QEG-w-6:User Satisfaction as Affected by Outputs
+                                QEG-w-7:Clarity of Referents
+                                QEG-w-8:Performance of an Embedding/Downstream System/Component
+                                QEG-w-9:Multi-task Performance
+                QEF:FEATURE
+                        QEF-f:Feature of outputs relative to a specified external frame of reference (+/- input), Form
+                                QEF-f-1:Similarity/Dissimilarity to Non-target Reference (form)
+                        QEF-c:Feature of outputs relative to a specified external frame of reference (+/- input), content/meaning
+                                QEF-c-1:Similarity/Dissimilarity to Non-target Reference (content/meaning)
+                        QEF-w:Feature of outputs relative to a specified external frame of reference (+/- input), Outputs as a whole
+                                QEF-w-1:Similarity/Dissimilarity to Non-target Reference (outputs as a whole)
+                                QEF-w-2:Effect on User Behaviour
+                                QEF-w-3:Effect on User Emotion
+                                QEF-w-4:Detectability of Speaker/Author Stance
+                                QEF-w-5:Detectability of Speaker/Author Trait
+                                QEF-w-6:Effect on User Opinion
+                                QEF-w-7:Effect on User Stance
+                                QEF-w-8:Interaction Completion Speed
+                                QEF-w-9:Likelihood According to External Model
