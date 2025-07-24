@@ -11,7 +11,7 @@ const element_h = {
 	'b': 'both'
 };
 
-const URL = "http://nlgtest.ddns.net:35241"
+const URL = "https://nlp-qcet.github.io"
 
 
 
